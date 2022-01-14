@@ -1,4 +1,5 @@
 import React from 'react';
+import TypescriptBasics from './01-Typescript-Fundamentals/final/final';
 function App() {
   return (
     <div className="App">
