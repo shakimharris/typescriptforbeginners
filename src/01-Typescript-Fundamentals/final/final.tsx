@@ -1,22 +1,23 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 
 //Final
 
-const TypescriptBasics: FunctionComponent = () => {
-    let today: string = "01/13/2022";
-    let tomorrow: string = "01/14/2022";
-    let isLoggedin: boolean = false;
-    let emptyValue: null = null;
-    let numberofDays: number = 33;
+const TypescriptBasics = () => {
+    let myName: string = "01/13/2022";
+    let myAge: number = 44;
+    let myBoolean: boolean = false;
+    let myHeight: null = null;
     let myRegEx: RegExp = /foo/;
+
+    const myArray: Array<string> = ["foo", "bar", "baz"];
 
     const names: string[] = [
         "James",
         "Paul"
     ]
 
-    const lastNames: Array<number> = [1, 2, 3];
-
+    const numberArray: Array<number> = [1, 2, 3];
+/*
     const users = {
         username: string;
         password: string;
@@ -25,47 +26,47 @@ const TypescriptBasics: FunctionComponent = () => {
         password: "jhans992"
     }
 
-    /**
-     * interface Users {
-     * username: string;
-     * password: string;
-     * }
-     * 
-     * const users: Person {
-     * username: "Shakim"
-     * password: "jhans992"
-     * }
-     */
+    
 
-    const ids: Record<number, string> = {
+    const ids = {
+        identification: number,
+        passport: number,
+    } = {
+        identification: 123456789,
+        passport: 987654321
+    }
+*/
+  interface id {
+      identification: number,
+      passport: number
+  }
+
+  const myId: id = {
+        identification: 123456789,  
+        passport: 987654321
+  }
+
+    const identificationRecord: Record<number, string> = {
         10: "james",
         20: "harris"
     };
 
-    if(ids[20] === "harris"){
-
+    if(identificationRecord[20] === "harris"){
+        console.log("Hello");
     }
-    
-    for(let i =0; i < 10; i++) {
-    console.log(i);
-    }
-
-    [1, 2, 3].forEach((v) => console.log(v));
-    const out: number[] = [4, 5, 6].map(( v) => v * 10);
 
     return (
-        <div>
-        {today}
-        {isLoggedin}
-        {tomorrow}
-        {emptyValue}
-        {numberofDays}
+        <>
+        {myName}
+        {myAge}
+        {myBoolean}
+        {myHeight}
         {myRegEx}
-        {names}
-        {lastNames}
-        {ids}
-        {out}
-        </div>
+        {myArray}
+        {numberArray}
+        {identificationRecord}
+
+        </>
     );
 }
 
