@@ -1,5 +1,5 @@
 import React from 'react';
-import BasicTypescriptTypes from './01-Typescript-Fundamentals/starter/starter';
+import BasicTypescriptTypes from './01-Typescript-Fundamentals/final/final';
 
 function App() {
   return (
